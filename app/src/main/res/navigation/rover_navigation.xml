@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rover_navigation"
+    app:startDestination="@id/curiosityFragment">
+
+    <fragment
+        android:id="@+id/curiosityFragment"
+        android:name="com.mergenc.nasappcent.view.CuriosityFragment"
+        android:label="fragment_curiosity"
+        tools:layout="@layout/fragment_curiosity" >
+        <action
+            android:id="@+id/action_curiosityFragment_to_popupFragment"
+            app:destination="@id/popupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/popupFragment"
+        android:name="com.mergenc.nasappcent.view.PopupFragment"
+        android:label="fragment_popup"
+        tools:layout="@layout/fragment_popup" >
+        <action
+            android:id="@+id/action_popupFragment_to_curiosityFragment"
+            app:destination="@id/curiosityFragment" />
+        <argument
+            android:name="roverUuid"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>

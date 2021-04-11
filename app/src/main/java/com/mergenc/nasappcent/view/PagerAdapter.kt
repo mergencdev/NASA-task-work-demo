@@ -1,4 +1,4 @@
-package com.mergenc.nasappcent
+package com.mergenc.nasappcent.view
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -21,8 +21,8 @@ class PagerAdapter(fragmentManager: FragmentManager) : FragmentPagerAdapter(frag
 
     override fun getPageTitle(position: Int): CharSequence? {
         return when (position) {
-            1 -> "Curiosity"
-            2 -> "Opportunity"
+            0 -> "Curiosity"
+            1 -> "Opportunity"
             else -> return "Spirit"
         }
         // Set tabs titles;
